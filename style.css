@@ -515,3 +515,9 @@ a:hover {
         padding: 20px;
     }
 }
+
+/* --- Añadido para que funcione el 3D en el móvil --- */
+.card-container, 
+.card {
+    touch-action: none;
+}
