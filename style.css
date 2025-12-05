@@ -542,3 +542,13 @@ a:hover {
 .card {
     touch-action: none;
 }
+
+
+.project-video-thumbnail {
+    width: 80%;         
+    max-width: 400px;   
+    height: auto;        
+    display: block;      
+    margin: 20px auto;   
+    border-radius: 8px;  
+}
