@@ -537,7 +537,15 @@ a:hover {
     }
 }
 
-/* --- Añadido para que funcione el 3D en el móvil --- */
+.imagen-card {
+    width: 70%;          
+    height: 200px;        
+    object-fit: cover;    
+    border-radius: 8px;   
+    display: block;  
+    margin-left: auto;
+    margin-right: auto;
+}
 .card-container, 
 .card {
     touch-action: none;

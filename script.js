@@ -1,12 +1,9 @@
 const card = document.querySelector('.card');
 const container = document.querySelector('.card-container');
 
-// ==========================================
-// --- CAMBIOS APLICADOS AQUÍ (SECCIONES 1, 2 y 3) ---
-// ==========================================
 
-// --- 1. Evento para la Inclinación 3D (Tilt) ---
-// CAMBIO: 'mousemove' -> 'pointermove'
+
+//  1. Evento para rotar la tarjeta 
 container.addEventListener('pointermove', (e) => {
     const rect = container.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
@@ -19,8 +16,7 @@ container.addEventListener('pointermove', (e) => {
     card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 });
 
-// --- 2. Evento para mover el Reflejo de Luz ---
-// CAMBIO: 'mousemove' -> 'pointermove'
+// 2. Evento para mover el Reflejo de Luz 
 card.addEventListener('pointermove', (e) => {
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -29,18 +25,12 @@ card.addEventListener('pointermove', (e) => {
     card.style.setProperty('--mouse-y', y + 'px');
 });
 
-// --- 3. Evento para resetear la tarjeta ---
-// CAMBIO: 'mouseleave' -> 'pointerleave'
-// Esto funciona cuando sacas el ratón O levantas el dedo fuera del área
+// 3. Evento para resetear la tarjeta
 container.addEventListener('pointerleave', () => {
     card.style.transform = 'rotateX(0deg) rotateY(0deg)';
 });
 
-// ==========================================
-// --- EL RESTO DEL CÓDIGO SIGUE IGUAL ---
-// ==========================================
 
-// --- 4. Smooth Scroll para el menú ---
 document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -56,8 +46,8 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-// --- 5. Lógica de Redirección Condicional ---
-// Para Cursos
+// 5. Lógica de Redirección Condicional 
+
 document.querySelectorAll('.course-item').forEach(item => {
     item.addEventListener('click', function() {
         const link = this.dataset.link; 
