@@ -560,3 +560,109 @@ a:hover {
     margin: 20px auto;   
     border-radius: 8px;  
 }
+
+/* --- ESTILOS PARA LA SECCIÓN DE EXPERIENCIA --- */
+.experience-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 30px auto 0;
+}
+
+.experience-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.experience-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.exp-logo-container {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exp-logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.exp-content {
+    flex-grow: 1;
+}
+
+.exp-content h3 {
+    color: var(--text-color);
+    font-size: 1.4em;
+    margin: 0 0 5px 0;
+}
+
+.exp-content .company-name {
+    color: var(--primary-color);
+    font-size: 1.1em;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.exp-content .dates {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 12px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.exp-content .dates::before {
+    content: "\f133";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.exp-content .description {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .experience-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .exp-content h3, 
+    .exp-content .company-name, 
+    .exp-content .dates {
+        justify-content: center;
+    }
+    
+    .experience-card:hover {
+        transform: translateY(-5px);
+    }
+}
